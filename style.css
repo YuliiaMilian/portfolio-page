@@ -1,0 +1,14 @@
+.title_3 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.section_info,
+.section_footer {
+  background: linear-gradient(90deg, #e7ecfb, #f3dbee);
+}
+
+.white-bg-text-centered,
+.section_info_skills {
+  background-color: white;
+}
