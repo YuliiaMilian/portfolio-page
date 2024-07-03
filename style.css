@@ -1,14 +1,96 @@
-.title_3 {
-  color: rgb(0, 0, 0);
+body {
+  font-family: Arial, monospace, sans-serif;
+}
+
+.page-portfolio {
+  background-image: url(images/bg-circle.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.page-portfolio-header,
+.page-portfolio-header-second {
+  font-size: 22px;
+  color: #1e444f;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: justify;
+  margin: 10px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.page-portfolio-header-name {
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.page-portfolio-header-image {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: right;
+  margin: 0 50px 75px;
+  width: 210px;
+}
+
+.header-text, .header-text a {
+  font-size: 16px;
+  color: #284b63;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 10px;
+  padding: 10px;
+  text-indent: 15px;
+}
+
+.page-portfolio-header-laptop {
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  margin: 25px 50px 75px;
+}
+
+.page-portfolio-header-second {
   text-align: center;
+  font-weight: bold;
 }
 
-.section_info,
-.section_footer {
-  background: linear-gradient(90deg, #e7ecfb, #f3dbee);
-}
-
-.white-bg-text-centered,
 .section_info_skills {
-  background-color: white;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  color: #284b63;
+  font-weight: 400;
+  line-height: 1;
+  text-align: left;
+  margin: 10px;
+  text-indent: 15px;
+}
+
+.section_info_skills_header th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.section_footer_links a,
+.section_footer {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    color: burlywood;
+  }
+
+  &:visited {
+    color: #3c6e71;
+  }
 }
