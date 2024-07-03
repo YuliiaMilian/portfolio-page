@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, monospace, sans-serif;
+}
+
 .page-portfolio {
   background-image: url(images/bg-circle.png);
   background-repeat: repeat;
@@ -6,7 +10,6 @@
 
 .page-portfolio-header,
 .page-portfolio-header-second {
-  font-family: monospace;
   font-size: 22px;
   color: #1e444f;
   font-weight: 500;
@@ -32,13 +35,7 @@
   width: 210px;
 }
 
-.page-portfolio-header-info,
-.section_footer_text,
-.page-portfolio-table-header,
-.page-portfolio-table,
-.section_footer_links a,
-.page-portfolio-info {
-  font-family: Arial, monospace, sans-serif;
+.header-text, .header-text a {
   font-size: 16px;
   color: #284b63;
   font-weight: 400;
@@ -63,11 +60,9 @@
 }
 
 .section_info_skills {
-  font-family: monospace;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px;
-  text-align: left;
   background-color: #f8f8f8;
   font-size: 14px;
   color: #284b63;
@@ -89,7 +84,6 @@
   padding: 10px;
   font-weight: 300;
   letter-spacing: 2px;
-  text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   &:hover {
