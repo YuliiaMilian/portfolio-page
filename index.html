@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <link rel="icon" href="./images/logo_notebook.png" />
+  <link rel="icon" href="./images/favicon.png" />
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,106 +8,166 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="page-portfolio">
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+
+        <dotlottie-player
+          src="https://lottie.host/6c321171-97be-42a2-8ce6-09624a820043/CyPgEsSz55.json"
+          background="transparent"
+          speed="1"
+          style="width: 100px; height: 100px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div class="navbar-menu">
+        <a href="#home-page">Home</a>
+        <a href="#skill-info">Skills</a>
+        <a href="#form-info">Form</a>
+        <a href="#contact-info">Contact</a>
+      </div>
+    </nav>
+
     <header>
-      <img
-        class="page-portfolio-header-image"
-        src="./images/portrait.png"
-        alt="broken image portrait"
-      />
-      <h1 class="page-portfolio-header">
-        Hello! <br />
-        I'm <em class="page-portfolio-header-name"> Yuliia </em><br />
-        Automation QA Engineer & <br />
-        Full-stack Developer
-      </h1>
+      <div class="container-welcome-info" id="home-page">
+        <div class="welcome-brand-info">
+          <div class="welcome-image">
+            <script
+              class="page-portfolio-welcome"
+              src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+              type="module"
+            ></script>
 
-      <p class="header-text">
-        I always ready for <em>new challenges</em>. <br />
-        <em>Education </em> is my <em>passport </em>to the future, <br />for
-        tomorrow belongs only to the people <br />
-        who prepare for it today.
-      </p>
+            <dotlottie-player
+              class="page-portfolio-welcome-player"
+              src="https://lottie.host/ee703296-a8a9-419f-90dd-6fd36499b0a2/oWuEBCSI2J.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px"
+              loop
+              autoplay
+            ></dotlottie-player>
+          </div>
+          <div class="welcome-info">
+            <h1 class="page-portfolio-header">
+              Hello! <br />
+              I'm <em class="page-portfolio-header-name"> Yuliia </em><br />
+              Automation QA Engineer & <br />
+              Full-stack Developer
+            </h1>
+
+            <p class="header-text">
+              I always ready for <em>new challenges</em>. <br />
+              <em>Education </em> is my <em>passport </em>to the future,
+              <br />for tomorrow belongs only to the people <br />
+              who prepare for it today.
+            </p>
+          </div>
+        </div>
+
+        <div class="header-image">
+          <img
+            class="page-portfolio-header-image"
+            src="./images/portrait.png"
+            alt="broken image portrait"
+          />
+        </div>
+      </div>
     </header>
-    <section class="section_info">
-      <article class="intro_info">
-        <h2 class="page-portfolio-header-second">Nice to meet you!</h2>
-        <p class="header-text">
-          I began my IT career 3 years ago as a Manual QA Engineer. Driven by an
-          insatiable desire to learn, I quickly developed an interest in
-          automation. Now, I work as an Automation QA Engineer, utilizing
-          frameworks Playwright and WebdriverIO to create end-to-end tests for
-          web pages and mobile applications.
-        </p>
-      </article>
 
-      <section class="section_info_skills">
-        <table>
-          <tr class="section_info_skills_header">
-            <th>&#128391; QA for Mobile and Web Apps</th>
-            <th>&#128187; Automated QA for Web Apps</th>
-            <th>&#128242; Automated QA for Mobile Apps</th>
-          </tr>
-          <tr>
-            <td>
-              <p>
-                Fundamentals of Manual Testing, Essential Skills and Knowledge:
-              </p>
-            </td>
-            <td>Web Automation Frameworks:</td>
-            <td>Mobile Automation Frameworks:</td>
-          </tr>
-          <tr>
-            <td>
-              <p>Well-versed in Agile methodology, STLC, SDLC, RTM.</p>
-            </td>
-            <td>Well-versed with Playwright</td>
-            <td>Well-versed with WebdriverIO, Appium</td>
-          </tr>
-          <tr>
-            <td>
-              <p>
-                Testing types used: black-box, functional, sanity, smoke,
-                regression, GUI, accessibility
-              </p>
-            </td>
-            <td>
-              <p>Expertise in building and maintaining automated test</p>
-            </td>
-            <td>
-              <p>
-                Writing and executing automated test scripts using WebdriverIO
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>
-                Main responsibilities: Requirements analysis,defects reporting,
-                test report
-              </p>
-            </td>
-            <td>
-              <p>Experience in integrating automated tests into CI/CD</p>
-            </td>
-            <td>
-              <p>Integrating automated tests into CI/CD pipelines</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>
-                Familiar with tools like Postman, Swagger Browserstack, AWS,
-                Figma, Confluence, and Jira.
-              </p>
-            </td>
-            <td>Knowledge of API testing tools</td>
-            <td>Test data management and analysis</td>
-          </tr>
-        </table>
+    <section class="section_info">
+      <div class="container-intro_info">
+        <article class="intro_info">
+          <div class="container-header-second">
+            <h2 class="page-portfolio-header-second">Nice to meet you!</h2>
+          </div>
+
+          <div class="container-header-text">
+            <p class="header-text">
+              I began my IT career 3 years ago as a Manual QA Engineer. Driven
+              by an insatiable desire to learn, I quickly developed an interest
+              in automation. Now, I work as an Automation QA Engineer, utilizing
+              frameworks Playwright and WebdriverIO to create end-to-end tests
+              for web pages and mobile applications.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <section class="section_info_skills" id="skill-info">
+        <div class="columns-is-centered">
+          <div class="column">
+            <h2>&#128391; QA for Mobile and Web Apps</h2>
+            <ul>
+              <li>
+                <p>
+                  Fundamentals of Manual Testing, Essential Skills and
+                  Knowledge:
+                </p>
+              </li>
+              <li>
+                <p>Well-versed in Agile methodology, STLC, SDLC, RTM.</p>
+              </li>
+              <li>
+                <p>
+                  Testing types used: black-box, functional, sanity, smoke,
+                  regression, GUI, accessibility
+                </p>
+              </li>
+              <li>
+                <p>
+                  Main responsibilities: Requirements analysis, defects
+                  reporting, test report
+                </p>
+              </li>
+              <li>
+                <p>
+                  Familiar with tools like Postman, Swagger, Browserstack, AWS,
+                  Figma, Confluence, and Jira.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2>&#128187; Automated QA for Web Apps</h2>
+            <ul>
+              <li>Web Automation Frameworks:</li>
+              <li>Well-versed with Playwright</li>
+              <li>
+                <p>Expertise in building and maintaining automated test</p>
+              </li>
+              <li>
+                <p>Experience in integrating automated tests into CI/CD</p>
+              </li>
+              <li>Knowledge of API testing tools</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2>&#128242; Automated QA for Mobile Apps</h2>
+            <ul>
+              <li>Mobile Automation Frameworks:</li>
+              <li>Well-versed with WebdriverIO, Appium</li>
+              <li>
+                <p>
+                  Writing and executing automated test scripts using WebdriverIO
+                </p>
+              </li>
+              <li>
+                <p>Integrating automated tests into CI/CD pipelines</p>
+              </li>
+              <li>Test data management and analysis</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </section>
+
     <section class="header-text">
-      <form action="">
+      <form action="" class="form-container-info">
         <fieldset>
           <legend>
             <img
@@ -123,136 +183,177 @@
               I'm eager to hear about your project. Let's get started &#128221;!
             </h3>
           </header>
-          <label class="label" for="fname">Company Name:</label> <br />
-          <input
-            class="input field"
-            type="text"
-            id="fname"
-            name="fname"
-            required
-          />
-          <br />
-          <br />
 
-          <label class="label" for="email">Email:</label> <br />
-          <input
-            class="input field"
-            type="text"
-            id="email"
-            name="email"
-            pattern="a@a.a"
-            title="Please enter valid email"
-            required
-          />
-          <br />
-          <br />
+          <div class="form-container" id="form-info">
+            <div class="form-column">
+              <div class="form-group">
+                <label class="label" for="fname">Company Name:</label>
+                <input
+                  placeholder="Enter your company name"
+                  class="input-field"
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  required
+                />
+              </div>
 
-          <label class="label" for="phone">Phone number:</label> <br />
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-            title="Please enter a phone number in the format ###-##-###"
-          />
-          <br />
-          <br />
+              <div class="form-group">
+                <label class="label" for="email">Email:</label>
+                <input
+                  placeholder="Enter your email"
+                  class="input-field"
+                  type="text"
+                  id="email"
+                  name="email"
+                  pattern="a@a.a"
+                  title="Please enter valid email"
+                  required
+                />
+              </div>
 
-          <legend>Project Category:</legend>
-          <br />
-          <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="Web" />
-            Web Platform
-          </label>
-          <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="Mobile" />
-            Mobile Platform
-          </label>
-          <br />
-          <br />
+              <div class="form-group">
+                <label class="label" for="phone">Phone number:</label>
+                <input
+                  placeholder="Enter your phone number"
+                  class="input-field"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                  title="Please enter a phone number in the format ###-##-###"
+                />
+              </div>
 
-          <label class="label" for="project">Type of project:</label> <br />
-          <select id="project" name="project">
-            <option value="0" disabled selected hidden></option>
-            <option value="Full-time">Full-time</option>
-            <option value="Part-time">Part-time</option>
-            <option value="Internship">Internship</option>
-          </select>
-          <br />
-          <br />
+              <div class="form-group">
+                <legend>Project Category:</legend>
 
-          <label class="label" for="budget">Budget:</label> <br />
-          <select id="budget" name="budget">
-            <option value="0" disabled selected hidden></option>
-            <option>$5,000 - $10,000</option>
-            <option>$10,000 - $25,000</option>
-            <option>$25,000+</option>
-          </select>
-          <br />
-          <br />
+                <label class="input-field" for="title_1">
+                  <input type="radio" id="title_1" name="title" value="Web" />
+                  Web Platform
+                </label>
+                <label class="input-field" for="title_2">
+                  <input
+                    type="radio"
+                    id="title_2"
+                    name="title"
+                    value="Mobile"
+                  />
+                  Mobile Platform
+                </label>
+              </div>
 
-          <label class="label" for="info">Additional details:</label> <br />
-          <textarea id="info" name="message"></textarea>
-          <br />
-          <br />
+              <div class="form-group">
+                <label class="label" for="project">Type of project:</label>
+                <select class="input-field" id="project" name="project">
+                  <option value="" disabled selected hidden>
+                    Select type of project
+                  </option>
+                  <option value="Full-time">Full-time</option>
+                  <option value="Part-time">Part-time</option>
+                  <option value="Internship">Internship</option>
+                </select>
+              </div>
+            </div>
 
-          <label class="label" for="start_date">Start date:</label> <br />
-          <input
-            type="date"
-            id="start_date"
-            name="start_date"
-            required
-            placeholder="DD/MM/YY"
-            pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/([0-9]{2})$"
-          />
-          <br />
-          <br />
+            <div class="form-column">
+              <div class="form-group">
+                <label for="budget">Budget:</label>
+                <select class="input-field" id="budget" name="budget">
+                  <option value="0" disabled selected hidden>
+                    Select budget
+                  </option>
+                  <option>$5,000 - $10,000</option>
+                  <option>$10,000 - $25,000</option>
+                  <option>$25,000+</option>
+                </select>
+              </div>
 
-          <label class="label" for="more_info">For more info:</label> <br />
-          <input
-            type="file"
-            name="file"
-            id="more_info"
-            accept="image/*, .pdf, .docx"
-            multiple
-          />
-          <br />
-          <br />
+              <div class="form-group">
+                <label for="info">Additional details:</label>
+                <textarea
+                  placeholder="Add more details"
+                  class="input-field"
+                  id="info"
+                  name="message"
+                ></textarea>
+              </div>
 
-          <button type="submit" autofocus>Submit</button>
+              <div class="form-group">
+                <label for="start_date">Start date:</label>
+                <input
+                  class="input-field"
+                  type="date"
+                  id="start_date"
+                  name="start_date"
+                  required
+                  placeholder="DD/MM/YY"
+                  pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/([0-9]{2})$"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="label" for="more_info">For more info:</label>
+                <input
+                  class="input-field"
+                  type="file"
+                  name="file"
+                  id="more_info"
+                  accept="image/*, .pdf, .docx"
+                  multiple
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="control">
+            <button class="submit-btn" type="submit" autofocus>Submit</button>
+          </div>
         </fieldset>
       </form>
     </section>
 
     <footer class="section_footer">
-      <div>
+      <div class="footer-container" id="contact-info">
         <div class="header-text">
           <p>
             <br />Living, learning, & leveling up one day at a time &#128218;<br />
           </p>
         </div>
-        <div>
-          <table>
-            <tr class="header-text">
-              <td>
-                <a href="mailto:Juliamilan1414@gmail.com" target="_blank"
-                  >Gmail</a
-                >
-              </td>
-              <td>
-                <a
-                  href="https://www.linkedin.com/in/yuliia-milian-a58886261/"
-                  target="_blank"
-                  >LinkedIn</a
-                >
-              </td>
-              <td>
-                <a href="https://github.com/YuliiaMilian" target="_blank"
-                  >GitHub</a
-                >
-              </td>
-            </tr>
-          </table>
+        <div class="footer-links">
+          <div class="footer-link">
+            <a href="mailto:Juliamilan1414@gmail.com" target="_blank">
+              <img
+                src="./images/gmail.png"
+                alt="Gmail logo"
+                class="footer-logo"
+              />
+              Gmail
+            </a>
+          </div>
+          <div class="footer-link">
+            <a
+              href="https://www.linkedin.com/in/yuliia-milian-a58886261/"
+              target="_blank"
+            >
+              <img
+                src="./images/linkedin.png"
+                alt="LinkedIn logo"
+                class="footer-logo"
+              />
+              LinkedIn
+            </a>
+          </div>
+          <div class="footer-link">
+            <a href="https://github.com/YuliiaMilian" target="_blank">
+              <img
+                src="./images/github.png"
+                alt="GitHub logo"
+                class="footer-logo"
+              />
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </footer>
