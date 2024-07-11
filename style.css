@@ -11,76 +11,85 @@ h1::first-line {
   background-attachment: fixed;
 }
 
-.page-portfolio-header,
-.page-portfolio-header-second {
+.header__brand__info-title,
+.info__container-header-title {
   font-size: 22px;
   color: #1e444f;
-  font-weight: 500;
   letter-spacing: 2px;
-  text-align: justify;
   margin: 10px;
-  padding: 10px;
   line-height: 1.5;
+  text-align: start;
+  font-weight: bold;
 }
 
-.page-portfolio-header-name {
+.info__container-header-title {
+  text-align: center;
+  background-color: #f5f8f9;
+}
+
+.header__brand__info-name {
   text-decoration: underline;
   font-weight: bold;
   text-align: justify;
 }
 
-.page-portfolio-header-image {
+.header__portrait-image {
   border-radius: 50%;
   border: 3px solid #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  float: right;
-  margin: 0 50px 75px;
-  width: 210px;
+  width: 240px;
 }
 
-.header-text,
-.header-text a {
+.header__brand__info-text,
+.info__container-text,
+.contact-form__title,
+.footer__container-text,
+.header__brand__info-title  {
   font-size: 16px;
   color: #284b63;
   font-weight: 400;
   line-height: 1.5;
-  text-align: justify;
+  text-align: start;
   margin: 10px;
-  padding: 10px;
   text-indent: 15px;
 }
 
-.page-portfolio-header-second {
-  text-align: center;
-  font-weight: bold;
-  padding: 0;
+.header__brand__info-title {
+  font-size: 20px;
 }
 
-.section_info_skills {
+.contact-form__label,
+.contact-form__radio-label {
+  font-size: 16px;
+  color: #284b63;
+  font-weight: 400;
+  text-align: start;
+}
+
+.info__skills {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
   background-color: #f8f8f8;
   font-size: 14px;
   color: #284b63;
   font-weight: 400;
   text-align: left;
-  margin: 120px 10px 50px;
   text-indent: 15px;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
-h2 {
+.footer {
   text-align: center;
-}
-
-.section_footer {
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
+  margin-top: 80px;
+  padding: 20px;
   font-weight: 300;
   letter-spacing: 2px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  .footer-link a {
+  .footer__link a {
     &:hover {
       color: burlywood;
     }
@@ -91,13 +100,7 @@ h2 {
   }
 }
 
-.page-portfolio-welcome-player {
-  float: inline-start;
-  width: 500px;
-  height: 300px;
-}
-
-.footer-logo {
+.section_footer__footer-logo {
   width: 40px;
   height: 40px;
 }
@@ -109,97 +112,71 @@ h2 {
   align-items: center;
   padding: 10px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #C4D3D4, #A2B9BC);
+  background: linear-gradient(135deg, #c4d3d4, #a2b9bc);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand {
+.navbar__brand {
   display: flex;
   align-items: center;
   margin: 0 30px;
   transition: transform 0.3s ease-in-out;
 }
 
-.navbar-menu {
+.navbar__menu {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 40px;
-  margin: 0;
   align-items: center;
   margin: 0 20px;
 }
 
-.navbar-menu a {
+.navbar__menu-link {
   font-size: 22px;
   color: #1e444f;
-  font-weight: 500;
   letter-spacing: 2px;
   text-align: justify;
   line-height: 1.5;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
-.navbar-menu a:hover {
-  color: #3E6A89;
+.navbar__menu-link:hover {
+  color: #3e6a89;
   transform: scale(1.1);
 }
 
-.container-welcome-info {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 80px 10px 0;
+  margin: 80px 10px;
 }
 
-.welcome-brand-info {
+.header__portrait,
+.header__brand {
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
 }
 
-.header-image {
+.info {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.welcome-image {
-  align-self: flex-end;
-}
-
-.container-intro_info {
-  display: flex;
-  flex-direction: row;
-}
-
-.container-intro_info {
   flex-direction: column;
-  align-items: end;
-  margin: 0 10px 80px 120px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
 }
 
-.container-header-text {
-  height: 50px;
-  width: 500px;
-}
-
-.columns-is-centered {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.info__skills__column {
   line-height: 25px;
-  align-items: baseline;
-}
-
-.column {
   height: 350px;
   width: 400px;
 }
 
-.form-container {
+.contact-form__form-container {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -208,45 +185,43 @@ h2 {
   border-radius: 10px;
 }
 
-.form-column {
+.contact-form__form-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.form-group {
+.contact-form__form-group {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 5px;
 }
 
-.footer-links {
+.footer__container-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 40px;
+  padding: 20px;
   margin: 10px;
   gap: 200px;
   flex-wrap: wrap;
   align-items: flex-end;
 }
 
-.input-field {
+.contact-form__input,
+.contact-form__input::placeholder,
+.contact-form__select,
+.contact-form__textarea::placeholder,
+.contact-form__file-input {
+  font-family: Arial, monospace, sans-serif;
   width: 190px;
-  color: #999;
+  color: #1e444f;
   height: 30px;
   font-size: 14px;
 }
 
-.control {
-  display: flex;
-  align-items: flex-end;
-  box-sizing: border-box;
-  justify-content: center;
-}
-
-.submit-btn {
+.contact-form__submit-btn {
   background-color: #e5edf2;
   font-size: 20px;
   width: 130px;
@@ -256,8 +231,8 @@ h2 {
   color: #1e444f;
 }
 
-.submit-btn:hover {
-  background-color: #818e98;
+.contact-form__submit-btn:hover {
+  background-color: #c4d3d4;
 }
 
 ::placeholder {
@@ -265,11 +240,31 @@ h2 {
   font-size: 14px;
 }
 
-.form-container-info {
+.contact-form__container {
   border-radius: 10px;
-  background: linear-gradient(135deg, #C4D3D4 0%, #E0E8E9 50%, #F5F8F9 100%);
+  background: linear-gradient(135deg, #c4d3d4 0%, #e0e8e9 50%, #f5f8f9 100%);
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border: 3px solid #fff;
 }
 
+.header__brand__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+}
+
+.info__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__skills__title {
+  background-color: #e5edf2;
+}
+
+.contact-form__control {
+  display: flex;
+  justify-content: center;
+}

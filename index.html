@@ -9,7 +9,7 @@
   </head>
   <body class="page-portfolio">
     <nav class="navbar">
-      <div class="navbar-brand">
+      <div class="navbar__brand">
         <script
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
           type="module"
@@ -24,26 +24,23 @@
           autoplay
         ></dotlottie-player>
       </div>
-      <div class="navbar-menu">
-        <a href="#home-page">Home</a>
-        <a href="#skill-info">Skills</a>
-        <a href="#form-info">Form</a>
-        <a href="#contact-info">Contact</a>
+      <div class="navbar__menu">
+        <a class="navbar__menu-link" href="#home-page">Home</a>
+        <a class="navbar__menu-link" href="#skill-info">Skills</a>
+        <a class="navbar__menu-link" href="#form-info">Form</a>
+        <a class="navbar__menu-link" href="#contact-info">Contact</a>
       </div>
     </nav>
 
     <header>
-      <div class="container-welcome-info" id="home-page">
-        <div class="welcome-brand-info">
-          <div class="welcome-image">
+      <div class="header" id="home-page">
+        <div class="header__brand">
+          <div class="header__brand__image">
             <script
-              class="page-portfolio-welcome"
               src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
               type="module"
             ></script>
-
             <dotlottie-player
-              class="page-portfolio-welcome-player"
               src="https://lottie.host/ee703296-a8a9-419f-90dd-6fd36499b0a2/oWuEBCSI2J.json"
               background="transparent"
               speed="1"
@@ -52,15 +49,14 @@
               autoplay
             ></dotlottie-player>
           </div>
-          <div class="welcome-info">
-            <h1 class="page-portfolio-header">
+          <div class="header__brand__info">
+            <h1 class="header__brand__info-title">
               Hello! <br />
-              I'm <em class="page-portfolio-header-name"> Yuliia </em><br />
+              I'm <em class="header__brand__info-name"> Yuliia </em><br />
               Automation QA Engineer & <br />
               Full-stack Developer
             </h1>
-
-            <p class="header-text">
+            <p class="header__brand__info-text">
               I always ready for <em>new challenges</em>. <br />
               <em>Education </em> is my <em>passport </em>to the future,
               <br />for tomorrow belongs only to the people <br />
@@ -68,10 +64,9 @@
             </p>
           </div>
         </div>
-
-        <div class="header-image">
+        <div class="header__portrait">
           <img
-            class="page-portfolio-header-image"
+            class="header__portrait-image"
             src="./images/portrait.png"
             alt="broken image portrait"
           />
@@ -79,15 +74,15 @@
       </div>
     </header>
 
-    <section class="section_info">
-      <div class="container-intro_info">
-        <article class="intro_info">
-          <div class="container-header-second">
-            <h2 class="page-portfolio-header-second">Nice to meet you!</h2>
+    <section>
+      <div class="info">
+        <div class="info__container">
+          <div class="info__container-header">
+            <h2 class="info__container-header-title">Nice to meet you!</h2>
           </div>
 
-          <div class="container-header-text">
-            <p class="header-text">
+          <div class="info__container-text">
+            <p>
               I began my IT career 3 years ago as a Manual QA Engineer. Driven
               by an insatiable desire to learn, I quickly developed an interest
               in automation. Now, I work as an Automation QA Engineer, utilizing
@@ -95,114 +90,132 @@
               for web pages and mobile applications.
             </p>
           </div>
-        </article>
-      </div>
+        </div>
 
-      <section class="section_info_skills" id="skill-info">
-        <div class="columns-is-centered">
-          <div class="column">
-            <h2>&#128391; QA for Mobile and Web Apps</h2>
-            <ul>
-              <li>
-                <p>
+        <section class="info__skills" id="skill-info">
+          <div class="info__skills__column">
+            <h2 class="info__skills__title">
+              &#128391; QA for Mobile and Web Apps
+            </h2>
+            <ul class="info__skills__list">
+              <li class="info__skills__item">
+                <p class="info__skills__description">
                   Fundamentals of Manual Testing, Essential Skills and
                   Knowledge:
                 </p>
               </li>
-              <li>
-                <p>Well-versed in Agile methodology, STLC, SDLC, RTM.</p>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
+                  Well-versed in Agile methodology, STLC, SDLC, RTM.
+                </p>
               </li>
-              <li>
-                <p>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
                   Testing types used: black-box, functional, sanity, smoke,
                   regression, GUI, accessibility
                 </p>
               </li>
-              <li>
-                <p>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
                   Main responsibilities: Requirements analysis, defects
                   reporting, test report
                 </p>
               </li>
-              <li>
-                <p>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
                   Familiar with tools like Postman, Swagger, Browserstack, AWS,
                   Figma, Confluence, and Jira.
                 </p>
               </li>
             </ul>
           </div>
-          <div class="column">
-            <h2>&#128187; Automated QA for Web Apps</h2>
-            <ul>
-              <li>Web Automation Frameworks:</li>
-              <li>Well-versed with Playwright</li>
-              <li>
-                <p>Expertise in building and maintaining automated test</p>
+          <div class="info__skills__column">
+            <h2 class="info__skills__title">
+              &#128187; Automated QA for Web Apps
+            </h2>
+            <ul class="info__skills__list">
+              <li class="info__skills__item">Web Automation Frameworks:</li>
+              <li class="info__skills__item">Well-versed with Playwright</li>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
+                  Expertise in building and maintaining automated test
+                </p>
               </li>
-              <li>
-                <p>Experience in integrating automated tests into CI/CD</p>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
+                  Experience in integrating automated tests into CI/CD
+                </p>
               </li>
-              <li>Knowledge of API testing tools</li>
+              <li class="info__skills__item">Knowledge of API testing tools</li>
             </ul>
           </div>
-          <div class="column">
-            <h2>&#128242; Automated QA for Mobile Apps</h2>
-            <ul>
-              <li>Mobile Automation Frameworks:</li>
-              <li>Well-versed with WebdriverIO, Appium</li>
-              <li>
-                <p>
+          <div class="info__skills__column">
+            <h2 class="info__skills__title">
+              &#128242; Automated QA for Mobile Apps
+            </h2>
+            <ul class="info__skills__list">
+              <li class="info__skills__item">Mobile Automation Frameworks:</li>
+              <li class="info__skills__item">
+                Well-versed with WebdriverIO, Appium
+              </li>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
                   Writing and executing automated test scripts using WebdriverIO
                 </p>
               </li>
-              <li>
-                <p>Integrating automated tests into CI/CD pipelines</p>
+              <li class="info__skills__item">
+                <p class="info__skills__description">
+                  Integrating automated tests into CI/CD pipelines
+                </p>
               </li>
-              <li>Test data management and analysis</li>
+              <li class="info__skills__item">
+                Test data management and analysis
+              </li>
             </ul>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </section>
 
-    <section class="header-text">
-      <form action="" class="form-container-info">
-        <fieldset>
-          <legend>
+    <section class="contact-form">
+      <form action="" class="contact-form__container">
+        <fieldset class="contact-form__fieldset">
+          <legend class="contact-form__legend">
             <img
-              class="avatar"
+              class="contact-form__avatar"
               src="./images/avatar.png"
               alt="Avatar image is broken"
-              width="84"
+              width="64"
             />
           </legend>
 
-          <header>
-            <h3 class="header-text">
+          <header class="contact-form__header">
+            <h3 class="contact-form__title">
               I'm eager to hear about your project. Let's get started &#128221;!
             </h3>
           </header>
 
-          <div class="form-container" id="form-info">
-            <div class="form-column">
-              <div class="form-group">
-                <label class="label" for="fname">Company Name:</label>
+          <div class="contact-form__form-container" id="form-info">
+            <div class="contact-form__form-column">
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="company-name"
+                  >Company Name:</label
+                >
                 <input
                   placeholder="Enter your company name"
-                  class="input-field"
+                  class="contact-form__input"
                   type="text"
-                  id="fname"
-                  name="fname"
+                  id="company-name"
+                  name="company-name"
                   required
                 />
               </div>
 
-              <div class="form-group">
-                <label class="label" for="email">Email:</label>
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="email">Email:</label>
                 <input
                   placeholder="Enter your email"
-                  class="input-field"
+                  class="contact-form__input"
                   type="text"
                   id="email"
                   name="email"
@@ -212,11 +225,13 @@
                 />
               </div>
 
-              <div class="form-group">
-                <label class="label" for="phone">Phone number:</label>
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="phone"
+                  >Phone number:</label
+                >
                 <input
                   placeholder="Enter your phone number"
-                  class="input-field"
+                  class="contact-form__input"
                   type="tel"
                   id="phone"
                   name="phone"
@@ -225,14 +240,14 @@
                 />
               </div>
 
-              <div class="form-group">
-                <legend>Project Category:</legend>
+              <div class="contact-form__form-group">
+                <legend class="contact-form__label">Project Category:</legend>
 
-                <label class="input-field" for="title_1">
+                <label class="contact-form__radio-label" for="title_1">
                   <input type="radio" id="title_1" name="title" value="Web" />
                   Web Platform
                 </label>
-                <label class="input-field" for="title_2">
+                <label class="contact-form__radio-label" for="title_2">
                   <input
                     type="radio"
                     id="title_2"
@@ -243,9 +258,15 @@
                 </label>
               </div>
 
-              <div class="form-group">
-                <label class="label" for="project">Type of project:</label>
-                <select class="input-field" id="project" name="project">
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="project"
+                  >Type of project:</label
+                >
+                <select
+                  class="contact-form__select"
+                  id="project"
+                  name="project"
+                >
                   <option value="" disabled selected hidden>
                     Select type of project
                   </option>
@@ -256,10 +277,10 @@
               </div>
             </div>
 
-            <div class="form-column">
-              <div class="form-group">
-                <label for="budget">Budget:</label>
-                <select class="input-field" id="budget" name="budget">
+            <div class="contact-form__form-column">
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="budget">Budget:</label>
+                <select class="contact-form__select" id="budget" name="budget">
                   <option value="0" disabled selected hidden>
                     Select budget
                   </option>
@@ -269,20 +290,24 @@
                 </select>
               </div>
 
-              <div class="form-group">
-                <label for="info">Additional details:</label>
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="info"
+                  >Additional details:</label
+                >
                 <textarea
+                  class="contact-form__textarea"
                   placeholder="Add more details"
-                  class="input-field"
                   id="info"
                   name="message"
                 ></textarea>
               </div>
 
-              <div class="form-group">
-                <label for="start_date">Start date:</label>
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="start_date"
+                  >Start date:</label
+                >
                 <input
-                  class="input-field"
+                  class="contact-form__input"
                   type="date"
                   id="start_date"
                   name="start_date"
@@ -292,10 +317,12 @@
                 />
               </div>
 
-              <div class="form-group">
-                <label class="label" for="more_info">For more info:</label>
+              <div class="contact-form__form-group">
+                <label class="contact-form__label" for="more_info"
+                  >For more info:</label
+                >
                 <input
-                  class="input-field"
+                  class="contact-form__file-input"
                   type="file"
                   name="file"
                   id="more_info"
@@ -306,32 +333,34 @@
             </div>
           </div>
 
-          <div class="control">
-            <button class="submit-btn" type="submit" autofocus>Submit</button>
+          <div class="contact-form__control">
+            <button class="contact-form__submit-btn" type="submit" autofocus>
+              Submit
+            </button>
           </div>
         </fieldset>
       </form>
     </section>
 
-    <footer class="section_footer">
-      <div class="footer-container" id="contact-info">
-        <div class="header-text">
+    <footer class="footer">
+      <div class="footer__container" id="contact-info">
+        <div class="footer__container-text">
           <p>
             <br />Living, learning, & leveling up one day at a time &#128218;<br />
           </p>
         </div>
-        <div class="footer-links">
-          <div class="footer-link">
+        <div class="footer__container-links">
+          <div class="footer__link">
             <a href="mailto:Juliamilan1414@gmail.com" target="_blank">
               <img
                 src="./images/gmail.png"
                 alt="Gmail logo"
-                class="footer-logo"
+                class="section_footer__footer-logo"
               />
               Gmail
             </a>
           </div>
-          <div class="footer-link">
+          <div class="footer__link">
             <a
               href="https://www.linkedin.com/in/yuliia-milian-a58886261/"
               target="_blank"
@@ -339,17 +368,17 @@
               <img
                 src="./images/linkedin.png"
                 alt="LinkedIn logo"
-                class="footer-logo"
+                class="section_footer__footer-logo"
               />
               LinkedIn
             </a>
           </div>
-          <div class="footer-link">
+          <div class="footer__link">
             <a href="https://github.com/YuliiaMilian" target="_blank">
               <img
                 src="./images/github.png"
                 alt="GitHub logo"
-                class="footer-logo"
+                class="section_footer__footer-logo"
               />
               GitHub
             </a>
