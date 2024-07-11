@@ -56,6 +56,7 @@ h1::first-line {
 
 .header__brand__info-title {
   font-size: 20px;
+  line-height: 10px;
 }
 
 .contact-form__label,
