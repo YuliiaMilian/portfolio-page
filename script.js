@@ -54,7 +54,7 @@ moviesRatingSimple(array);
 // Sort the movies by rating in descending order.
 
 const moviesDescending = (array) => {
-  return array.sort((a, b) => (a.rating > b.rating ? -1 : 1));
+  return array.sort((a, b) => (b.rating - a.rating));
 };
 
 moviesDescending(array);
@@ -72,7 +72,7 @@ getMoviesReleasedAfter2000(array);
 
 // Sort the movies by year of release in ascending order.
 const moviesAscending = (array) => {
-  return array.sort((a, b) => (a.year > b.year ? 1 : -1));
+  return array.sort((a, b) => (a.year - b.year));
 };
 
 moviesAscending(array);
@@ -153,7 +153,7 @@ const titlesDirectedByNolan = (array) => {
     .filter(
       (movie) => movie.director === "Christopher Nolan" && movie.rating > 8.5,
     )
-    .sort((a, b) => (a.rating - b.rating))
+    .sort((a, b) => (b.rating - a.rating))
     .map((movie) => movie.title);
 };
 
@@ -179,7 +179,7 @@ averageRatingMovies(array);
 const moviesRatingHigher8 = (array) => {
   return array
     .filter((movie) => movie.rating > 8.5)
-    .sort((a, b) => (a.year < b.year ? -1 : 1))
+    .sort((a, b) => (a.year - b.year))
     .map((movie) => movie.title);
 };
 
