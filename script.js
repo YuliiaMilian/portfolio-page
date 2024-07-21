@@ -224,3 +224,59 @@ const moviesDirectedByNolan = (array) => {
 moviesDirectedByNolan(array);
 
 
+async function main() {
+  const apiUrl = 'https://staging.hlodan.com/brands';
+  const brandApiUrl = 'https://api.brandfetch.io/v2/brands/';
+
+
+  const headers = {
+    'Authorization': 'Bearer J2RRXZcCePU5rnRI+102Q92cwnFVcn8UnpBoUcrs87I=',
+    'Content-Type': 'application/json'
+  };
+
+  let response = await fetch(apiUrl);
+  let brands = await response.json();
+
+  console.log(brands);
+
+  let randomBrands = [];
+  while (randomBrands.length < 2) {
+    let randomBrand = brands[Math.floor(Math.random() * brands.length)];
+    if (!randomBrands.includes(randomBrand)) {
+      randomBrands.push(randomBrand);
+    }
+  }
+    
+  console.log(randomBrands);
+
+
+    Promise.all([
+      fetch(`${brandApiUrl}${randomBrands[0]}.com`, { headers }),
+      fetch(`${brandApiUrl}${randomBrands[1]}.com`, { headers })
+    ])  .then(async ([r1, r2]) => {
+      const [data1, data2] = await Promise.all([
+        r1.json(),
+        r2.json()
+      ]);
+  
+      console.log([data1, data2]);
+
+      [data1, data2].forEach((data) => {
+        const brandElement = document.createElement('div');
+  
+        const brandName = data.name || 'Brand name not found';
+        const brandDescription = data.description || 'Description not found';
+  
+        brandElement.innerHTML = `
+          <p>Brand: ${brandName}</p>
+          <p>Description: ${brandDescription}</p>
+        `;
+  
+        document.body.appendChild(brandElement);
+      });
+  
+    })
+
+}
+
+main();
