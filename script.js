@@ -266,10 +266,16 @@ async function main() {
   
         const brandName = data.name || 'Brand name not found';
         const brandDescription = data.description || 'Description not found';
+        const brandColor = data.colors.map((color) => color.hex) || 'Color not found';
+        const brandImages = data.images.map((image) => image.formats) || 'Image not found';
+        const image = brandImages[0].map((img) => img.src)
+
+        console.log(image);
   
         brandElement.innerHTML = `
-          <p>Brand: ${brandName}</p>
-          <p>Description: ${brandDescription}</p>
+          <p style="color: ${brandColor[0]}">Brand: ${brandName}</p>
+          <p style="color: ${brandColor[1 % brandColor.length]}">Description: ${brandDescription}</p>
+          <img src="${image[1 % image.length]}" alt="Broken image" width="500" height="600">
         `;
   
         document.body.appendChild(brandElement);
