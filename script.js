@@ -230,7 +230,7 @@ async function main() {
 
 
   const headers = {
-    'Authorization': 'Bearer J2RRXZcCePU5rnRI+102Q92cwnFVcn8UnpBoUcrs87I=',
+    'Authorization': 'Bearer HcWhLYwxJlt/UEETIBnb7UJO8+u6XujskiqPuRqQek4=',
     'Content-Type': 'application/json'
   };
 
@@ -275,7 +275,7 @@ async function main() {
         brandElement.innerHTML = `
           <p style="color: ${brandColor[0]}">Brand: ${brandName}</p>
           <p style="color: ${brandColor[1 % brandColor.length]}">Description: ${brandDescription}</p>
-          <img src="${image[1 % image.length]}" alt="Broken image" width="500" height="600">
+          <img src="${image[1 % image.length]}" alt="Broken image" width="500">
         `;
   
         document.body.appendChild(brandElement);
