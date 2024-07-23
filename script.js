@@ -224,3 +224,65 @@ const moviesDirectedByNolan = (array) => {
 moviesDirectedByNolan(array);
 
 
+async function main() {
+  const apiUrl = 'https://staging.hlodan.com/brands';
+  const brandApiUrl = 'https://api.brandfetch.io/v2/brands/';
+
+
+  const headers = {
+    'Authorization': 'Bearer HcWhLYwxJlt/UEETIBnb7UJO8+u6XujskiqPuRqQek4=',
+    'Content-Type': 'application/json'
+  };
+
+  let response = await fetch(apiUrl);
+  let brands = await response.json();
+
+  console.log(brands);
+
+  let randomBrands = [];
+  while (randomBrands.length < 2) {
+    let randomBrand = brands[Math.floor(Math.random() * brands.length)];
+    if (!randomBrands.includes(randomBrand)) {
+      randomBrands.push(randomBrand);
+    }
+  }
+    
+  console.log(randomBrands);
+
+
+    Promise.all([
+      fetch(`${brandApiUrl}${randomBrands[0]}.com`, { headers }),
+      fetch(`${brandApiUrl}${randomBrands[1]}.com`, { headers })
+    ])  .then(async ([r1, r2]) => {
+      const [data1, data2] = await Promise.all([
+        r1.json(),
+        r2.json()
+      ]);
+  
+      console.log([data1, data2]);
+
+      [data1, data2].forEach((data) => {
+        const brandElement = document.createElement('div');
+  
+        const brandName = data.name || 'Brand name not found';
+        const brandDescription = data.description || 'Description not found';
+        const brandColor = data.colors.map((color) => color.hex) || 'Color not found';
+        const brandImages = data.images.map((image) => image.formats) || 'Image not found';
+        const image = brandImages[0].map((img) => img.src)
+
+        console.log(image);
+  
+        brandElement.innerHTML = `
+          <p style="color: ${brandColor[0]}">Brand: ${brandName}</p>
+          <p style="color: ${brandColor[1 % brandColor.length]}">Description: ${brandDescription}</p>
+          <img src="${image[1 % image.length]}" alt="Broken image" width="500">
+        `;
+  
+        document.body.appendChild(brandElement);
+      });
+  
+    })
+
+}
+
+main();
