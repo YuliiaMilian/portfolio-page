@@ -23,14 +23,24 @@ class Circle {
   moveCircle() {
     this.x += this.speedX;
     this.y += this.speedY;
-
-    if (this.x > width - this.size / 2 || this.x < this.size / 2) {
+  
+    if (this.x > width - this.size / 2) {
+      this.x = width - this.size / 2;
+      this.speedX *= -1;
+    } else if (this.x < this.size / 2) {
+      this.x = this.size / 2
       this.speedX *= -1;
     }
-    if (this.y > height - this.size / 2 || this.y < this.size / 2) {
+  
+    if (this.y > height - this.size / 2) {
+      this.y = height - this.size / 2;
+      this.speedY *= -1;
+    } else if (this.y < this.size / 2) {
+      this.y = this.size / 2;
       this.speedY *= -1;
     }
   }
+  
 
   drawCircle() {
     fill(...this.color);
@@ -41,13 +51,12 @@ class Circle {
 
 class CircleManager {
   constructor(numberOfCircles, colorHelper) {
-    this.circles = [];
-    for (let i = 0; i < numberOfCircles; i++) {
+    this.circles = Array(numberOfCircles).fill(null).map(() => {
       const x = random(width);
       const y = random(height);
       const size = random(5, 70);
-      this.circles.push(new Circle(x, y, size, colorHelper));
-    }
+      return new Circle(x, y, size, colorHelper);
+    });
   }
 
   updateCircles() {
