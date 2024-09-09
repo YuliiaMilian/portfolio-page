@@ -86,3 +86,107 @@ const superUserTask = (user: SuperUser, task: () => void): void => {
     throw Error();
   }
 }
+
+// 1- Create a function that accepts a UserNew object but allows any property to be optional.
+interface UserNew {
+  id: number;
+  name: string;
+  age: number;
+  email: string;
+}
+
+type UserOptional = Partial<UserNew>;
+
+let fun = (user: UserOptional) => {
+};
+
+
+// 2- Create a function that returns only selected properties from a Product object.
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+}
+
+type SelectedProperties = Pick<Product, 'name'>;
+
+let getSelectedProperties = (items: Product): SelectedProperties => {
+  return {
+    name: items.name
+  };
+};
+
+
+// 3- Create a function that returns a Person object, excluding sensitive data like the socialSecurityNumber.
+interface Person {
+  name: string;
+  age: number;
+  socialSecurityNumber: string;
+}
+ type ExcludingSecurityNumber = Omit <Person, 'socialSecurityNumber'>;
+
+ let data = (properties: Person): ExcludingSecurityNumber => {
+  return {
+    name: 'Yuliia',
+    age: 24
+  }
+ }
+
+
+// 4- Make a Config object immutable.
+interface Config {
+  apiKey: string;
+  baseUrl: string;
+  timeout: number;
+}
+
+type ImmutableConfig = Readonly<Config>;
+
+let config: ImmutableConfig = {
+  apiKey: 'ttt',
+  baseUrl: 'uuu',
+  timeout: 14,
+}
+
+//config.apiKey = 'yyy'; //read-only property
+
+
+// 5- Create a type that represents a dictionary where the keys are strings, and the values are numbers.
+
+type Strings = 'date' | 'numbers' | 'year';
+
+type Value = 1 | 2 | 7;
+
+type NewPoint = Record<Strings, Value>;
+
+let point: NewPoint = {
+  date: 1,
+  numbers: 2,
+  year: 7
+}
+
+
+// 6- Create a type that excludes specific values from a union of string literals.
+type AvailableColors = "red" | "green" | "blue" | "yellow";
+
+type SpecificValues = Exclude<AvailableColors, "red">;
+
+//let colors: SpecificValues = "red"; //Type '"red"' is not assignable to type 'SpecificValues'
+
+
+// 7- Create a type that extracts only certain values from a union of string literals.
+type AvailableColor = "red" | "green" | "blue" | "yellow";
+
+type ExtractsValues = Extract<AvailableColor, "green" | "yellow" >;
+
+let newColors: ExtractsValues = "green";
+let color: ExtractsValues = "yellow";
+
+
+// 8- Create a type that removes null and undefined from a union type
+type Address = string | null | undefined;
+
+type NotNull = NonNullable<Address>;
+
+//let value: NotNull = null //Type 'null' is not assignable to type 'string'.
